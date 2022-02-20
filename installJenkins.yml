@@ -1,4 +1,5 @@
-- hosts: jenkinsServer
+---
+- hosts: all
   become: yes
   tasks:
   - name: Download Long Term Jenkins release
@@ -42,3 +43,4 @@
   - name: print init password jenkins
     debug:
      var: result.stdout
+...
